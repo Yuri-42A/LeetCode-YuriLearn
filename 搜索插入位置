@@ -1,0 +1,14 @@
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+       for i in range(len(nums)):  
+            if nums[i] >= target:  
+                return i    
+        return len(nums)
+
+但是，下面这种方法为什么不对？
+
+        n = 0
+        for i in nums:  
+            if i < target:  
+                n = n + 1              
+        print(n)  
